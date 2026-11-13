@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="keywords" content="Landi Jiang, personal website, art, research">
+	<meta name="description" content="Landi Jiang personal website, showcasing her artwork and scientific research. She is a student at the University of Southern California, studying cognitive science and linguistics.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>landi jiang</title>
+	<link rel="stylesheet" href="main.css">
+	<style>
+		a {
+		color: #310000;        
+		text-decoration: none;  
+		}
+		a:hover {
+		color: #9f1c02;
+		}
+
+		body{
+			font-family: "Redaction";
+		}
+		
+		#header {
+			padding-top: 50px;
+			padding-bottom: 30px;
+		} 
+
+		img {
+			width: 40px;
+			height: auto;
+			float: right;
+		}
+
+		.chair{
+			position: relative;
+            /* transition: all 1s ease-in-out; */
+			top: 20px;
+            left: -120px;
+		}
+
+		 #transition:hover .chair {
+            filter: saturate(300%);
+		}
+        
+        #portrait {
+			width: 330px;
+			border: double 3px rgba(60, 0, 8, 0.407);
+			border-radius: 80px;
+		}
+
+		#main {
+			background-color: #b9eba231;
+			width: 500px;
+			padding: 30px;
+			border-radius: 70px;
+			border: double 3px rgba(60, 0, 8, 0.407);
+		}
+
+		#page-wrapper {
+			display: flex;
+			justify-content: center;
+		}
+
+		#sidebar{
+			padding-right: 40px;
+			width: 340px;
+		}
+
+	</style>
+	
+</head>
+<body>
+	
+	<div id="header">
+		<h1>landi jiang :D</h1>
+	</div>
+
+	<div id="navbar">
+		<a href="index.html">about</a>
+		<a href="science.html">science stuff</a>
+		<a href="art.html">art stuff</a>
+	</div>
+
+	<div id="page-wrapper">
+		<div id="sidebar">
+			<img id="portrait" src="img/landi.jpg" alt="landi portrait by carla shedivy">
+		</div>
+		<div id="main">
+
+			<h2>hello!</h2>
+			<p>i'm a senior at the university of southern california, where I study cognitive science and linguistics. broadly, i am interested in language use in social contexts. </p>
+
+			<p>i currently work with <a href="https://www.semantics.land" target="_blank"> alexis wellwood </a> investigating concepts in context, and with <a href="https://snastase.github.io" target="_blank"> sam nastase </a> studying (collaborative) narrative-making. i spent summer 2026 at the santa fe institute modeling temperature effects on human performance, in collaboration with <a href="https://andrew-stier.github.io" target="_blank"> andrew stier </a> and <a href="http://chriskempes.com/Chris_Kempes/Home.html" target="_blank"> chris kempes </a>.</p>
+
+			<p>outside of school, i love to people-watch, draw pictures, and cook spicy soups.</p>
+
+		</div> 
+		<div id="transition">
+			<div class="chair draggable">
+			<img src="img/chair.png" alt="chair">	
+			</div>
+		</div>
+		</div>
+
+	<div id="footer">
+		<strong> thank you for coming to my website!!</strong>
+	</div>
+
+	<script src="https://unpkg.com/draggabilly@3/dist/draggabilly.pkgd.min.js"></script>
+   <script>
+    var draggableElems = document.querySelectorAll('.draggable');
+    // array of Draggabillies
+    var draggies = []
+    // init Draggabillies
+    for ( var i=0; i < draggableElems.length; i++ ) {
+    var draggableElem = draggableElems[i];
+    var draggie = new Draggabilly( draggableElem, {
+    containment: ''
+	});
+	draggies.push( draggie );
+	}</script>
+
+</body>
+</html>
